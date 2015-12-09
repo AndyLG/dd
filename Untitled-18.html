@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>三列布局</title>
+<style>
+
+</style>
+<script>
+function dd() {
+	var d = document.getElementById("d");
+	d.value = "dd\n\r"+"cc\r\n";
+	d.value = "dd\n\r";
+	alert(d.value.length);
+}
+	function test () {
+		var d = document.getElementById("d");
+		var regExp  = /^dd\n\n$/;
+		alert(regExp.test(d.value));
+	}
+	function test1 () {
+		var d = document.getElementById("d");
+		alert(d.value.indexOf("dd\n\n"));
+	}
+	function test2 () {
+		var d = document.getElementById("d");
+		for(var i=0;i<d.value.length;i++){
+			alert(d.value.charAt(i));
+
+		}
+	}
+	  function test3()
+    {
+        var area = document.getElementById ("d");
+        area.value = area.value.replace (/[\n]/g, '\\n');
+    }
+</script>
+</head>
+
+<body>
+	
+    <textarea id="d"></textarea>
+	<a href="#" onclick="dd();">dd</a>
+	<a href="#" onclick="test();">test</a>
+	<a href="#" onclick="test1();">test1</a>
+	<a href="#" onclick="test2();">test2</a>
+	<a href="#" onclick="test3();">test3</a>
+</body>
+</html>
